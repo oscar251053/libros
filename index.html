@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Libros Gratuitos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 Buscador de libros</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar por autor o título...">
+            
+            <select id="categorySelect">
+                <option value="">Todas las categorías</option>
+                <option value="fiction">Ficción</option>
+                <option value="history">Historia</option>
+                <option value="poetry">Poesía</option>
+                <option value="drama">Teatro / Drama</option>
+                <option value="juvenile+fiction">Juvenil</option>
+            </select>
+            <input type="number" id="yearInput" placeholder="Año (ej: 1900)" min="1000" max="2025">
+            <button id="searchBtn">Buscar</button>
+        </div>
+    </header>
+
+    <!-- <main id="bookResults">
+        <p class="placeholder">Busca un libro para comenzar...</p>
+    </main> -->
+    <section id="external-search-help" style="text-align: center; padding: 0 20px 20px 20px; color: white;">
+        <p>¿No encontraste lo que buscabas? Intenta en estas bibliotecas manuales:</p>
+        <div class="search-container">
+            <button onclick="window.open('https://www.elejandria.com/buscar?q=' + document.getElementById('searchInput').value)">Elejandría</button>
+            <button onclick="window.open('https://infolibros.org/?s=' + document.getElementById('searchInput').value)">InfoLibros</button>
+            <button onclick="window.open('https://aprendergratis.es/?s=' + document.getElementById('searchInput').value)">Aprender Gratis</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
