@@ -1,0 +1,15 @@
+[build]
+  # El directorio donde está tu código de React/Vite
+  base = "libros"
+
+  # El comando para compilar el proyecto
+  command = "npm run build"
+
+  # La carpeta que contiene los archivos finales (relativa a 'base')
+  publish = "dist"
+
+[[redirects]]
+  # Esto evita errores 404 al recargar rutas en aplicaciones React (SPA)
+  from = "/*"
+  to = "/index.html"
+  status = 200
